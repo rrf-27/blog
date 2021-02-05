@@ -58,7 +58,9 @@ body, html {
     font-size: 1rem;
     letter-spacing: .1em;
     line-height: inherit;
+    color:  rgba(255, 255, 255, 0.9);
     font-family: 'Open Sans Condensed', sans-serif, 'PT Sans', sans-serif;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 110, 1), rgba(163, 56, 99, 1));
 }
 
 h1 {
@@ -109,6 +111,7 @@ a {
     align-items: center;
     visibility: hidden;
     transform: scaleX(0);
+    background-color: rgba(0, 0, 0, 0.9);
     transition: all .6s ease-in-out 0s;
 }
 .btn:hover::before {
@@ -119,109 +122,20 @@ a {
 .btn:hover {
     transition: all .6s ease-in-out 0s;
     color:  rgba(0, 0, 0, 1);
-}
-
-/* ================================ content/ "body" ==================== */
-
-#post-page-content {
-    width: 100%;
-    height: 85%;
-}
-#contact-info-post-page {
-    width: 100%;
-    height: 10%;
-    text-align: center;
-}
-
-#content-main-heading {
-    width: 100%;
-    height: 20%;
-    background-image: radial-gradient( rgba(255, 255, 0, 0.9),  rgba(184, 130, 208, 0.9));
-}
-#empty-space-main-heading {
-    width: 100%;
-    height: 50%;
-    background: none;
-}
-#main-heading-space {
-    width: 100%;
-    height: 50%;
-    background-color: rgba(255, 255, 255, 0.4);
-}
-.h-divider {
-    width: 100%;
-    height: 1%;
-}
-.first-row, .second-row-middle {
-    width: 19%;
-    height: 100%;
-}
-.v-divider {
-    width: 1%;
-    height: 100%;
-}
-.second-row, .first-row-middle {
-    width: 80%;
-    height: 100%;
-}
-img {
-    width: 100%;
-    height: 100%;
-}
-.line-heading {
-    width: 98%;
-    height: 12%;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.9);
-}
-.line-content {
-    width: 98%;
-    height: 87%;
-}
-
-.divider-2 {
-    width: 100%;
-    height: 1%;
-}
-#second-line {
-    height: 35%;
-}
-ul {
-    list-style-type: none;
-}
-li {
-    display: inline;
-}
-/* =============== !!!! ================ */
-.nav-bar-item, #main-heading-space {
-    justify-content: center;
-}
-.nav-bar-item, #main-heading-space, .line-heading {
-    display: flex;
-    align-items: center;
-}
-#nav-bar-post-page, .btn::before, #contact-info-post-page {
-    background-color: rgba(0, 0, 0, 0.9);
-}
-#post-page-content, #first-line, #second-line, #third-line, .line-heading, .line-content {
-    margin: 0 auto;
-}
-#first-line, #third-line {
-    height: 20%;
-}
-#first-line, #second-line, #third-line {
-    width: 60%;
-}
-.first-row, .v-divider, .first-row-middle {
-    float: right;
-}
-.line-heading, .line-content {
-    text-align: justify;
-}
-.btn:hover, body {
     background-color: rgba(255, 255, 255, 0.9);
 }
-#contact-info-post-page, #nav-bar-post-page {
-    color:  rgba(255, 255, 255, 0.9);
+
+/* ==================== content =============================== */
+#post-page-content {
+    width: 100%;
+    height: 95%;
+    text-align: center;
+}
+/* =============== !!!! ================ */
+.nav-bar-item, #post-page-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ======================================== */
@@ -233,85 +147,29 @@ li {
     h1 {
         font-size: 1.5rem;
     }
-    h2, .nav-bar-item {
-        font-size: 1.2rem;
-    }
-    #first-line, #second-line, #third-line {
-        width: 100%;
-    }
     .nav-bar-item {
+        font-size: 1.2rem;
         width: 15%;
     }
 }
 @media screen and (max-width: 767px) {
-    body {
-        font-size: .7rem;
-    }
     h1 {
         font-size: 1.2rem;
     }
-    h2, .nav-bar-item {
-        font-size: .8rem;
-    }
     .nav-bar-item {
+        font-size: .8rem;
         width: 20%;
-    }
-    #post-page-content {
-        width: 100%;
-        height: 50rem;
-    }
-    #second-line img, #second-line v-divider {
-        display: none;
-    }
-    .first-row-middle {
-        width: 98%;
-        height: 100%;
-    }
-    img {
-        height: 50%;
-    }
-    .first-row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    #first-line .first-row {
-        width: 39%;
-        height: 100%;
-    }
-    #first-line .second-row {
-        width: 60%;
-        height: 100%;
     }
     .btn::before {
         width: 97%;
     }
-    #first-line {
-        height: 18%;
-    }
 }
-@media screen and (max-width: 350px) {
-    #post-page-content {
-        height: 56rem;
-    }
-}
-@media screen and (max-width: 300px) {
-    #post-page-content {
-        height: 63rem;
-    }
-}
+
 @media screen and (max-width: 241px) {
-    body {
-        font-size: .5rem;
-    }
     h1 {
         font-size: .7rem;
     }
-    h2, .nav-bar-item {
+    .nav-bar-item {
         font-size: .6rem;
     }
-    #post-page-content {
-        height: 50rem;
-    }
-
 }
