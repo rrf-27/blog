@@ -286,10 +286,18 @@ li {
     .btn::before {
         width: 97%;
     }
+    #first-line {
+        height: 18%;
+    }
 }
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 350px) {
     #post-page-content {
-        height: 60rem;
+        height: 56rem;
+    }
+}
+@media screen and (max-width: 300px) {
+    #post-page-content {
+        height: 63rem;
     }
 }
 @media screen and (max-width: 241px) {
