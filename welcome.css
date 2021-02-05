@@ -1,0 +1,303 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ============================================================================= */
+
+body, html {
+    min-width: 100%;
+    width: 100%;
+    min-height:  100%;
+    height: 100%;
+    font-size: 1rem;
+    letter-spacing: .1em;
+    line-height: inherit;
+    font-family: 'Open Sans Condensed', sans-serif, 'PT Sans', sans-serif;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+h2, .nav-bar-item {
+    font-size: 1.3rem;
+}
+h1, h2 {
+    font-family: 'Yusei Magic', sans-serif;
+}
+p::first-letter {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-style: bold;
+}
+/* ======================== navigation bar ===================================== */
+
+#nav-bar-post-page {
+    width: 100%;
+    height: 5%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-bar-item {
+    width: 10%;
+    height: 100%;
+    float: left;
+}
+#about-btn {
+    float: right;
+}
+
+.btn {
+    position: relative;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    bottom: 20%;
+    align-items: center;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all .6s ease-in-out 0s;
+}
+.btn:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.btn:hover {
+    transition: all .6s ease-in-out 0s;
+    color:  rgba(0, 0, 0, 1);
+}
+
+/* ================================ content/ "body" ==================== */
+
+#post-page-content {
+    width: 100%;
+    height: 85%;
+}
+#contact-info-post-page {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+#content-main-heading {
+    width: 100%;
+    height: 20%;
+    background-image: radial-gradient( rgba(255, 255, 0, 0.9),  rgba(184, 130, 208, 0.9));
+}
+#empty-space-main-heading {
+    width: 100%;
+    height: 50%;
+    background: none;
+}
+#main-heading-space {
+    width: 100%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.h-divider {
+    width: 100%;
+    height: 1%;
+}
+.first-row, .second-row-middle {
+    width: 19%;
+    height: 100%;
+}
+.v-divider {
+    width: 1%;
+    height: 100%;
+}
+.second-row, .first-row-middle {
+    width: 80%;
+    height: 100%;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+.line-heading {
+    width: 98%;
+    height: 12%;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.9);
+}
+.line-content {
+    width: 98%;
+    height: 87%;
+}
+
+.divider-2 {
+    width: 100%;
+    height: 1%;
+}
+#second-line {
+    height: 35%;
+}
+ul {
+    list-style-type: none;
+}
+li {
+    display: inline;
+}
+/* =============== !!!! ================ */
+.nav-bar-item, #main-heading-space {
+    justify-content: center;
+}
+.nav-bar-item, #main-heading-space, .line-heading {
+    display: flex;
+    align-items: center;
+}
+#nav-bar-post-page, .btn::before, #contact-info-post-page {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+#post-page-content, #first-line, #second-line, #third-line, .line-heading, .line-content {
+    margin: 0 auto;
+}
+#first-line, #third-line {
+    height: 20%;
+}
+#first-line, #second-line, #third-line {
+    width: 60%;
+}
+.first-row, .v-divider, .first-row-middle {
+    float: right;
+}
+.line-heading, .line-content {
+    text-align: justify;
+}
+.btn:hover, body {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+#contact-info-post-page, #nav-bar-post-page {
+    color:  rgba(255, 255, 255, 0.9);
+}
+/* ======================================== */
+
+@media screen and (max-width: 1080px) {
+    body {
+        font-size: .9rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2, .nav-bar-item {
+        font-size: 1.2rem;
+    }
+    #first-line, #second-line, #third-line {
+        width: 100%;
+    }
+    .nav-bar-item {
+        width: 15%;
+    }
+}
+@media screen and (max-width: 767px) {
+    body {
+        font-size: .7rem;
+    }
+    h1 {
+        font-size: 1.2rem;
+    }
+    h2, .nav-bar-item {
+        font-size: .8rem;
+    }
+    .nav-bar-item {
+        width: 20%;
+    }
+    #post-page-content {
+        width: 100%;
+        height: 69rem;
+    }
+    #second-line img, #second-line v-divider {
+        display: none;
+    }
+    .first-row-middle {
+        width: 98%;
+        height: 100%;
+    }
+    img {
+        height: 50%;
+    }
+    .first-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #first-line .first-row {
+        width: 39%;
+        height: 100%;
+    }
+    #first-line .second-row {
+        width: 60%;
+        height: 100%;
+    }
+    .btn::before {
+        width: 97%;
+    }
+}
+@media screen and (max-width: 241px) {
+    body {
+        font-size: .5rem;
+    }
+    h1 {
+        font-size: .7rem;
+    }
+    h2, .nav-bar-item {
+        font-size: .6rem;
+    }
+    #post-page-content {
+        height: 50rem;
+    }
+
+}
