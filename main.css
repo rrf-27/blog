@@ -91,9 +91,6 @@ p {
     float: left;
 }
 
-.btn {
-    position: relative;
-}
 
 .btn::before {
     content: "";
@@ -146,7 +143,9 @@ a {
     justify-content: center;
 }
 #content-box, #main-content p {
-    margin: 0 auto; 
+    margin: 0 auto;
+}
+.btn, #content-box, #main-content p{
     position: relative;
 }
 /* ============================================= */
