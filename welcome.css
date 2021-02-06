@@ -94,10 +94,6 @@ a {
     height: 100%;
     float: left;
 }
-#about-btn {
-    float: right;
-}
-
 .btn {
     position: relative;
 }
