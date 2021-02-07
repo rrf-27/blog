@@ -87,9 +87,6 @@ a {
     font-size: 1rem;
 }
 
-.btn {
-    position: relative;
-}
 .btn::before {
     content: "";
     position: absolute;
@@ -125,7 +122,6 @@ a {
     width: 90%;
     height: 30%;
     text-align: center;
-    position: relative;
     top: 26%;
 }
 
@@ -188,6 +184,9 @@ a {
 
 .welcome-divider, #content-welcome-heading {
     background-color: rgba(0, 0, 0, 0.9);
+}
+.btn, #welcome {
+    position: relative;
 }
 /* ================= Media ============================================ */
 @media screen and (max-width: 1080px) {
