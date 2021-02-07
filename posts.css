@@ -1,3 +1,4 @@
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -48,38 +49,28 @@ table {
     border-spacing: 0;
 }
 
-/* ============================================================================= */
+/* ================= end reset ======================= */
 
 body, html {
     min-width: 100%;
     width: 100%;
-    min-height:  100%;
+    min-height: 100%;
     height: 100%;
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: .1em;
     line-height: inherit;
-    color:  rgba(255, 255, 255, 0.9);
     font-family: 'Open Sans Condensed', sans-serif, 'PT Sans', sans-serif;
+    color: rgba(255, 255, 255, 0.9);
     background-image: linear-gradient(to bottom, rgba(0, 0, 110, 1), rgba(163, 56, 99, 1));
 }
-
 h1 {
-    font-size: 1.6rem;
-}
-h2, .nav-bar-item {
-    font-size: 1.3rem;
-}
-h1, h2 {
     font-family: 'Yusei Magic', sans-serif;
+    font-size: 1.1rem;
 }
-p::first-letter {
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    font-style: bold;
-}
-/* ======================== navigation bar ===================================== */
 
-#nav-bar-post-page {
+/* ============== navigation bar ============================= */
+
+#nav-bar-posts-page {
     width: 100%;
     height: 5%;
 }
@@ -90,76 +81,166 @@ a {
 }
 
 .nav-bar-item {
-    width: 10%;
+    width: 8%;
     height: 100%;
     float: left;
+    font-size: 1rem;
 }
+
 .btn {
     position: relative;
 }
-
 .btn::before {
     content: "";
     position: absolute;
     width: 80%;
     height: 2px;
-    bottom: 20%;
+    bottom: 15%;
+    background-color: rgba(255, 255, 255, 0.9);
     align-items: center;
     visibility: hidden;
     transform: scaleX(0);
-    background-color: rgba(255, 255, 255, 0.9);
-    transition: all .6s ease-in-out 0s;
 }
 .btn:hover::before {
     visibility: visible;
     transform: scaleX(1);
 }
+.btn:hover, .btn::before {
+    transition: all .6s ease-in-out 0s;
+}
 
-/* ==================== content =============================== */
-#post-page-content {
+/* ========================= content ===================== */
+
+#content-posts-page {
     width: 100%;
-    height: 95%;
+    height: 85%;
+}
+
+.h-divider {
+    width: 100%;
+    height: 1%;
+}
+
+#welcome {
+    width: 90%;
+    height: 30%;
+    text-align: center;
+    position: relative;
+    top: 26%;
+}
+
+.welcome-divider {
+    width: 100%;
+    height: 1%;
+}
+
+#welcome-heading {
+    width: 100%;
+    height: 9%;
+}
+
+#content-welcome {
+    width: 35%;
+    height: 90%;
+    border-radius: 10% 0%;
+    overflow: hidden;
+}
+#content-welcome-empty-space {
+    width: 100%;
+    height: 60%;
+}
+
+#content-welcome-empty-space img {
+    width: 100%;
+    height: 100%;
+}
+#content-welcome-heading {
+    width: 100%;
+    height: 40%; 
+}
+
+
+#welcome, #content-welcome {
+    margin: 0 auto;
+}
+
+#content-welcome-heading, .nav-bar-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ======================== contact info ====================== */
+
+#contact-info-posts-page {
+    width: 100%;
+    height: 10%;
     text-align: center;
 }
-/* =============== !!!! ================ */
-.nav-bar-item, #post-page-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+#contact-info-posts-page ul {
+    list-style-type: none;
 }
 
-/* ======================================== */
+#contact-info-posts-page ul li {
+    display: inline;
+}
 
+.welcome-divider, #content-welcome-heading {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+/* ================= Media ============================================ */
 @media screen and (max-width: 1080px) {
-    body {
-        font-size: .9rem;
-    }
-    h1 {
-        font-size: 1.5rem;
+    body, .nav-bar-item, h1 {
+        font-size: 1rem;
     }
     .nav-bar-item {
-        font-size: 1.2rem;
         width: 15%;
+    }
+    .btn::before{
+        bottom: 10%; 
+    }
+    #content-welcome {
+        width: 50%;
     }
 }
 @media screen and (max-width: 767px) {
-    h1 {
-        font-size: 1.2rem;
+    body {
+        font-size: .7rem;
+    }
+    h1, .nav-bar-item {
+        font-size: .5rem;
     }
     .nav-bar-item {
-        font-size: .8rem;
-        width: 20%;
+        width: 15%;
+    }
+    #content-posts-page {
+        width: 100%;
     }
     .btn::before {
         width: 97%;
     }
 }
 
-@media screen and (max-width: 241px) {
-    h1 {
-        font-size: .7rem;
+@media screen and (max-width: 280px) {
+    body {
+        font-size: .5rem;
     }
     .nav-bar-item {
-        font-size: .6rem;
+        font-size: .3rem;
+    }
+    h1 {
+        font-size: .4rem;
+    }
+    .btn::before {
+        bottom: 0%;
+    }
+    #content-welcome-empty-space img {
+        height: 90%;
+    }
+    #content-welcome-empty-space {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
     }
 }
