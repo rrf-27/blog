@@ -11,18 +11,54 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=PT+Sans&display=swap" rel="stylesheet">
         <title> Posts </title>
         <link rel="stylesheet" href="posts.css">
-        
+        <link rel="stylesheet" href="nav-bar.css">
+        <script>
+            function onClick() {
+                var x = document.getElementById('nav-bar-options');
+                
+                if (x.style.display === 'block') {
+                    x.style.display = 'none';
+                    
+                    document.getElementById('first-icon').style.display = 'block';
+                    document.getElementById('first-icon').style.transition = 'all .6s ease-in-out 0s';
+                    
+                    document.getElementById('second-icon').style.display = 'none';
+                    
+                } else {
+                    x.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                    
+                    document.getElementById('first-icon').style.display = 'none';
+                    
+                    document.getElementById('second-icon').style.display = 'block';
+                    document.getElementById('second-icon').style.transition = 'all .6s ease-in-out 0s';
+                }
+            }
+        </script>
     </head>
 
     <body>
-        
-        <div id="nav-bar-posts-page">
+        <div id="nav-bar-home-page">
+            <div id="bars-space" onclick="onClick()">
+                <i class="fas fa-bars" id="first-icon"></i>
+                <i class="fas fa-times" id="second-icon"></i>
+            </div>
+        </div>
+        <div id="nav-bar-options">
             <a href="index.html">
-                <div class="nav-bar-item btn"> &#127917; Home</div>
+                <div class="nav-bar-item btn">&#127917; Home</div>
             </a>
             <a href="posts.html">
-                <div class="nav-bar-item btn"> &#127796; Posts</div>
+                <div class="nav-bar-item btn">&#127796; Posts</div>
             </a>
+            <div id="s-media">
+                <a href="https://www.instagram.com/robertxruse/">
+                    <div class="nav-bar-item"><i class="fab fa-instagram"></i></div>
+                </a>
+                <a href="https://www.facebook.com/robert.ruse.750">
+                    <div class="nav-bar-item"><i class="fab fa-facebook-square"> </i></div>
+                </a>
+            </div>
         </div>
         <div id="content-posts-page">
             <div class="h-divider"></div>
@@ -40,14 +76,6 @@
                 </div>
             </div>
         </div>
-        <div id="contact-info-posts-page">
-            <p>For more, you can follow me on:</p>
-            <ul>
-                <li><a href="https://www.instagram.com/robertxruse/"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.facebook.com/robert.ruse.750"><i class="fab fa-facebook-square"></i></a></li>
-            </ul>
-        </div>
-
     </body>
     
 </html>
