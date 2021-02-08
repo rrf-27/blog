@@ -92,7 +92,7 @@ p {
     top: 10%;
 }
 #main-content h1 {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.9);
 }
 #hoping {
     width: 100%;
