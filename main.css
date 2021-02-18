@@ -94,6 +94,7 @@ nav a, #options {
 
 #box-heading img {
     height: 9.375rem;
+    width: auto;
     max-height: 18.688rem;
     max-width: 100%;
     border-radius: 6.25rem;
