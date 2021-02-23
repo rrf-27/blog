@@ -22,6 +22,7 @@ html {
 
 body {
     background-color: rgba(189, 187, 186, 0.9);
+    color: rgba(0, 0, 0, 0);
 }
 
 nav {
@@ -70,6 +71,7 @@ nav a, #options {
 #main {
     width: 100%;
     height: 94vh;
+    overflow: hidden;
 }
 
 
@@ -151,7 +153,7 @@ p::first-letter {
 }
 
 
-#main, nav a, #options, #contentul, #special-btn {
+#main, nav a, #options, .menu-option, .close-btn-menu-option, .posts-content-box, #posts-content, #first-icon, #second-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,48 +172,115 @@ p::first-letter {
     border-radius: 1.25rem;
 }
 
-#box-content p, .hover-text, #special-hover-text {
+#box-content p, .hover-text, #social-media-menu-options {
     position: relative;
 }
 
-.social-media-btn:hover .hover-text, #options:hover .hover-text, #special-btn:hover #special-hover-text {
+.social-media-btn:hover .hover-text, #options:hover .hover-text {
     display: block;
-    animation: separat 1s linear;
     
 }
 
-.social-media-btn:hover i, #options:hover i, #special-btn:hover i {
+.social-media-btn:hover i, #options:hover i {
     position: fixed;
 }
 
-#attention {
-    display: none;
-    animation: none;
-    background: inherit;
-    width: 100vw;
+#menu-options {
+    width: 100%;
     height: 100vh;
+    display: none;
     z-index: 10;
+    background-color: rgba(100, 100, 100, 0.99);
+    animation: menu-option-animation 1s linear !important;
 }
 
-#contentul {
+.menu-option {
     width: 100%;
-    height: 95%;
+    height: 5rem;
+    color: rgba(255, 255, 255, 0.7);
+    animation: color-changer .6s linear;
 }
-#special-btn {
-    width: 3.75rem;
-    height: 5%;
-    float: right;
+
+.menu-option a {
+    color: inherit;
+}
+
+.menu-option:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 0.7);
     cursor: pointer;
 }
-#special-hover-text {
-    width: auto;
-    height: auto;
-    display: none;
+
+
+.close-btn-menu-option {
+    width: 3.438rem;
+    height: 3.438rem;
+    float: right;
+    cursor: pointer;
+    color: rgba(200, 200, 200, 1);
+}
+
+@keyframes color-changer {
+    from {color: rgba(0, 0, 0, 0);}
+    to {color: inherit;}
+}
+
+@keyframes menu-option-animation {
+    from {transform: scale(0) matrix(100,0,0,1,0,0);
+        height: 0vh;}
+    to {transform: scale(1) matrix(none);
+        height: 100vh;}
+}
+
+#social-media-menu-options {
+    top: calc(100% - 28.438rem);
+}
+
+
+#posts-content {
+    width: 100%;
+    height: calc(100% - 29.688rem);
+    color: rgba(255, 255, 255, 0.7);
     padding: .625rem;
-    top: 102%;
-    animation: none;
-    border: .125rem solid rgba(74, 77, 76, 0.7);
-    border-radius: 1.25rem;
+    display: none;
+    animation: posts-animation .7s linear;
+}
+
+@keyframes posts-animation {
+    from {transform: scale(0) rotate(720deg);
+        border-radius: 31.25rem;
+        filter: blur(.313rem);}
+    to {transform: scale(1) rotate(0deg);
+        border-radius: none;
+        filter: blur(none);}
+}
+
+
+.posts-content-box {
+    width: 18.75rem;
+    height: 18.75rem;
+}
+
+#first-icon, #second-icon {
+    width: 3.125rem;
+    height: 100%;
+    float: right;
+}
+#second-icon {
+    display: none;
+}
+
+#posts-menu-option {
+    display: block;
+}
+
+#posts-text, #first-icon, #second-icon {
+    position: relative;
+}
+
+#posts-text {
+    top: calc(100% - 3.125rem);
+    left: calc(50% - .938rem);
 }
 
 @media screen and (max-width: 1080px) {
@@ -223,9 +292,6 @@ p::first-letter {
 @media screen and (max-width: 768px) {
     nav a, #options {
         left: 30%;
-    }
-    #main {
-        overflow-x: hidden;
     }
     h1 {
         font-size: 21px;
@@ -239,6 +305,21 @@ p::first-letter {
     }
     #box-content {
         width: 94%;
+    }
+    #posts-content {
+        height: calc(100% - 19.5rem);
+    }
+    .posts-content-box {
+        width: 13rem;
+        height: 13rem;
+    }
+    #social-media-menu-options {
+        width: 100%;
+        top: calc(100% - 18.438rem);
+    }
+    #social-media-menu-options .menu-option {
+        width: 33.333%;
+        float: left;
     }
 }
 
@@ -263,6 +344,9 @@ p::first-letter {
     p {
         font-size: 15px;
     }
+    #main {
+        height: 92vh;
+    }
     #main-box {
         width: 96%;
         height: 27rem;
@@ -276,8 +360,6 @@ p::first-letter {
     #main-box {
         width: 93%;
         height: 25rem;
-        position: relative;
-        top: 30px;
     }
     nav a, #options {
         width: 3.2rem;
@@ -286,27 +368,73 @@ p::first-letter {
     #box-content {
         width: 90%;
     }
-}
-
-@media screen and (max-width: 280px) {
-    #main-box {
-        top: 0;
+    #main {
+        height: 88vh;
+    }
+    #box-content p {
+        top: 1.5rem;
+    }
+    .posts-content-box {
+        width: 8rem;
+        height: 8rem;
     }
 }
+
 @media screen and (max-width: 240px) {
     nav a, #options {
         width: 2.5rem;
         height: 2.5rem;
     }
-    #main-box {
+    #main {
         height: 28rem;
-        top: 100px;
+    }
+    #box-content p {
+        top: 1rem;
+    }
+    .menu-option {
+        height: 2rem;
+    }
+    .close-btn-menu-option {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    #posts-text {
+        top: calc(100% - 1.5rem);
+    }
+    #first-icon, #second-icon {
+        width: 1.6rem;
+        height: 2rem;
+        top: 0;
+    }
+    #social-media-menu-options {
+        top: calc(100% - 7.5rem);
+    }
+    #posts-content {
+        height: calc(100% - 8.75rem);
     }
 }
 
-
-
-
+@media screen and (max-height: 480px) {
+    #main {
+        min-height: 30rem;
+        height: auto;
+    }
+    #posts-content {
+        height: calc(100% - 19.5rem);
+    }
+    .posts-content-box {
+        width: 13rem;
+        height: 13rem;
+    }
+    #social-media-menu-options {
+        width: 100%;
+        top: calc(100% - 18.438rem);
+    }
+    #social-media-menu-options .menu-option {
+        width: 33.333%;
+        float: left;
+    }
+}
 
 
 
