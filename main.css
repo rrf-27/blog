@@ -236,7 +236,6 @@ p::first-letter {
     top: calc(100% - 28.438rem);
 }
 
-
 #posts-content {
     width: 100%;
     height: calc(100% - 29.688rem);
@@ -283,6 +282,11 @@ p::first-letter {
     left: calc(50% - .938rem);
 }
 
+a:hover i {
+    transform: scale(1.5);
+    transition: all .2s ease-in-out;
+}
+ 
 @media screen and (max-width: 1080px) {
     nav a, #options {
         left: 35%;
@@ -378,6 +382,19 @@ p::first-letter {
         width: 8rem;
         height: 8rem;
     }
+    .menu-option {
+        height: 4rem;
+    }
+    .close-btn-menu-option {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    #social-media-menu-options {
+        top: calc(100% - 14.5rem);
+    }
+    #posts-text {
+        top: calc(100% - 2.46rem);
+    }
 }
 
 @media screen and (max-width: 240px) {
@@ -392,25 +409,23 @@ p::first-letter {
         top: 1rem;
     }
     .menu-option {
-        height: 2rem;
+        height: 3rem;
     }
-    .close-btn-menu-option {
-        width: 1.5rem;
-        height: 1.5rem;
+   #posts-content h1 {
+        font-size: 13px;
     }
     #posts-text {
-        top: calc(100% - 1.5rem);
-    }
-    #first-icon, #second-icon {
-        width: 1.6rem;
-        height: 2rem;
-        top: 0;
+        top: calc(100% - 2.05rem);
     }
     #social-media-menu-options {
-        top: calc(100% - 7.5rem);
+        top: calc(100% - 11.5rem) !important;
     }
     #posts-content {
-        height: calc(100% - 8.75rem);
+        height: calc(100% - 11.5rem) !important;
+    }
+    .posts-content-box {
+        height: 4rem !important;
+        width: 4rem !important;
     }
 }
 
