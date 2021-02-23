@@ -2,24 +2,46 @@
 <html lang="en">
 
     <head>
-        <script type="text/jscript" src="app.js"></script>
-        <meta name="author" content="Robert Ruse">
-        <meta name="theme-color" content=" rgba(165, 165, 162, 0.9)">
-        <meta name="description" content="My name is Robert and I'm a romanian teenager learning at one of the oldest high schools from Bucharest. Also, I'm a kyokushin fighter and a web developer. Hope you'll enjoy reading my blog!">
-        <title>Home</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/jscript" src="app.js"></script>
+        <meta name="author" content="Robert Ruse">
+        <meta name="description" content="My name is Robert and I'm a romanian teenager learning at one of the oldest high schools from Bucharest. Also, I'm a kyokushin fighter and a web developer. Hope you'll enjoy reading my blog!">
+        <meta name="theme-color" content="rgba(165, 165, 162, 0.9)">
+        <link rel="canonical" href="https://robertruse.me/">
+        <meta name="robots" content="index, follow">
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Robert Ruse">
+        <meta property="og:description" content="My name is Robert and I'm a romanian teenager learning at one of the oldest high schools from Bucharest. Also, I'm a kyokushin fighter and a web developer. Hope you'll enjoy reading my blog!">
+        <meta property="og:site_name" content="Robert Ruse">
+        <meta property="og:locale" content="en_US" />
+        <meta property=”og:image” content="https://robertruse.me/images/RobertRuse.jpeg">
+        <meta property="og:url" content="https://robertruse.me" />
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <title>Home</title>
     </head>
     
     <body>
         
-        <div id="attention">
-            <div id="special-btn" onclick="ifClick()"><i class="fas fa-expand-arrows-alt"></i>
-                <span id="special-hover-text">Close</span>
+        <div id="menu-options">
+        
+            <div class="close-btn-menu-option" onclick="ifClick()"><i class="far fa-times-circle"></i></div>
+            <div class="menu-option" onclick="optionOpener('index.html', 'index.html')">Home</div>
+            <div class="menu-option" onclick="showPosts()" id="posts-menu-option">
+                <span id="posts-text">Posts</span>
+                <i class="fas fa-angle-double-right" id="first-icon"></i>
+                <i class="fas fa-angle-double-down" id="second-icon"></i>
             </div>
-            <h1 id="contentul">Still working on it...</h1>
+            <div id="posts-content">
+                <div class="box posts-content-box"><h1>No posts yet...</h1></div>
+            </div>
+            <div id="social-media-menu-options" class="menu-options">
+                <a href="https://www.facebook.com/robert.ruse.750/" class="menu-option"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/robertxruse/" class="menu-option"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:rroberflorentin@gmail.com" class="menu-option"><i class="fas fa-mail-bulk"></i></a>
+            </div>
+                
         </div>
         
         <nav>
