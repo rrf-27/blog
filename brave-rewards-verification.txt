@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: robertruse.me
+Token: a891fc774346d8c1e009d855a1d4880325bcdd07e50be702d0c6935734bb5409
